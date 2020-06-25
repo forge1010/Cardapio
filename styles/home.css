@@ -1,0 +1,234 @@
+/* CSS GLOBAL, MAIN E SOBRE/HOME(PÁGINA INICIAL) */ 
+/* ====== --GLOBAIS--- ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ :root {
+     --azul: #89abad;
+     --branco: rgba(255, 255, 255, 0.705);
+     --preto: #000000ee;
+     --laranja: #F86358;
+     --salmao: #E94F4F;
+
+ }
+
+ body {
+    font-family: 'Noto Sans JP', sans-serif; background-color :rgb(216, 214, 214);
+
+ }
+ header {
+     font-size: 20px;
+     padding: 20px;
+
+ }
+
+ ul li {
+  list-style-type: none;
+ }
+
+ p {
+   padding: 5px;
+   margin: 5px 0
+}
+a {
+  text-decoration: none;
+}
+
+input[type=checkbox] {
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+}
+.fas {
+  cursor: pointer;
+}
+.sobre-icone {
+  color: var(--laranja);
+  padding: 5px;
+}
+.txt-negrito {
+  color: var(--preto);
+  font-weight: 900;
+}
+
+.txt-italico {
+  font-style: italic;
+}
+
+
+/* Classes modificadas no JavaScript */
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* - ====----MAIN--===- - */
+
+.main{
+  margin-left: 280px; /* Same as the width of the sidebar */
+}
+section {
+  width: 90%;
+  margin: 30px auto;
+}
+
+
+/* -- Títulos--*/
+
+.main h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: var(--preto);
+}
+
+ .lanches h1::after, .bebidas h1::after, .pedido h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--laranja);
+  bottom: 0;
+  left: 0;
+} 
+
+
+/* -==- SOBRE(página inicial) ---= */
+/* alinhamento + background */
+#sobre {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../img/background.jpg);
+  background-size: 100%;
+  margin: 0;
+     
+  
+}
+#sobre:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.322);
+  box-shadow: inset 200px 350px 700px #000000de,inset -200px -350px 700px #000000e7;;
+}
+#sobre .container{
+  padding-top: 2em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  
+}
+/* Títulos */
+.sobre h1 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: var(--branco);
+  z-index: 2;
+
+ }
+ .sobre h1 span {
+   color: var(--salmao);
+ }
+.sobre h2{
+  z-index: 2;
+  position: relative;
+}
+
+/* Espaçamento e alinhamentos dos conteúdos*/
+#sobre-info-container {
+  max-width: 85%;
+  z-index: 2;
+  position: relative;
+  margin: 5px auto;
+}
+
+#sobre-txt{
+  z-index: 2;
+  max-width: 90%;
+  margin: 5px auto;
+
+}
+#sobre-txt p {
+  text-align: justify;
+}
+
+ 
+#sobre-info-container ul {
+    margin: 0px auto;
+}
+
+
+#slide {
+  background-color: #ffffff;
+  width: 600px;
+  z-index: 2;
+  height: 300px;
+  overflow: hidden;
+  margin: 10px auto;
+  box-shadow: 0px 0px 10px #000;
+  position: relative;
+  border-radius: 8px;
+}
+
+
+.main div#slide figure {
+  text-align: center;
+
+}
+ #slide figure img {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  width: 600px;
+  height: 300px;
+  cursor: pointer;
+  margin-left: -300px;
+  border-radius: 8px;
+
+}
+
+#voltar, #avancar {
+  z-index: 6;
+  position: absolute;
+  bottom: 110px;
+  width: 5%;
+  padding: 5px ;
+  background: rgba(0, 0, 0, 0.65);
+  color: rgba(221, 221, 221, 0.61);
+  cursor: pointer;
+}
+
+
+#slide #voltar {
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#slide #avancar {
+  right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
+i {
+  font-size: 25px;
+}
+
+
